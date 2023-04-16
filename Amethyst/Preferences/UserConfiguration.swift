@@ -328,6 +328,13 @@ class UserConfiguration: NSObject {
     }
 
     private func loadConfigurationFile() {
+        /**
+         TODO: (GOALS)
+         1. Get all Configurations
+         2. Dialogue the user to ask where to put them (default to home folder)
+         3. Export them into a .amethyst.yml
+         
+         */
         let xdgConfigPath = ProcessInfo.processInfo.environment["XDG_CONFIG_HOME"] ?? NSHomeDirectory().appending("/.config")
         let amethystXDGConfigPath = xdgConfigPath.appending("/amethyst")
         let amethystYAMLConfigPath = NSHomeDirectory().appending("/.amethyst.yml")
